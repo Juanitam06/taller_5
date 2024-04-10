@@ -8,8 +8,12 @@ def mandelbrot(h, w, maxit=20, r=2):
     #para hallar el valor de x se usa la funcion linspace el cual recible un rango de numeros entre -2.5 y 1.5
     #y el argumento de esto es cuatro por "h" mas uno
     x = np.linspace(-2.5, 1.5, 4*h+1) 
+    #para hallar el valor de y se usa la funcion linspace el cual recible un rango de numeros entre -1.5 y 1.5
+    #y el argumento de esto es tres por "w" mas uno
     y = np.linspace(-1.5, 1.5, 3*w+1)
+    #con la funcion meshgrid hacemos una asignacion multiple en A y B
     A, B = np.meshgrid(x, y)
+    #El valor de 
     C = A + B*1j
     z = np.zeros_like(C)
     divtime = maxit + np.zeros(z.shape, dtype=int)
