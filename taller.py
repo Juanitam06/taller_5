@@ -1,8 +1,13 @@
-import numpy as np
-import matplotlib.pyplot as plt
-def mandelbrot(h, w, maxit=20, r=2):
+#importar la biblioteca numpy y crearle un alias
+import numpy as np  
+#importar/llamar la biblioteca matplotlib y crearle un alias
+import matplotlib.pyplot as plt  
+#define una funcion con sus respectivos paramentros, en este caso maxit y r tienen un valor inicial
+def mandelbrot(h, w, maxit=20, r=2):  
     """Returns an image of the Mandelbrot fractal of size (h,w)."""
-    x = np.linspace(-2.5, 1.5, 4*h+1)
+    #para hallar el valor de x se usa la funcion linspace el cual recible un rango de numeros entre -2.5 y 1.5
+    #y el argumento de esto es cuatro por "h" mas uno
+    x = np.linspace(-2.5, 1.5, 4*h+1) 
     y = np.linspace(-1.5, 1.5, 3*w+1)
     A, B = np.meshgrid(x, y)
     C = A + B*1j
