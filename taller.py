@@ -13,7 +13,7 @@ def mandelbrot(h, w, maxit=20, r=2):
     y = np.linspace(-1.5, 1.5, 3*w+1)
     #con la funcion meshgrid hacemos una asignacion multiple en A y B
     A, B = np.meshgrid(x, y)
-    #El valor de 
+    #El valor de C se determina en la suma de A mas B por1
     C = A + B*1j
     z = np.zeros_like(C)
     divtime = maxit + np.zeros(z.shape, dtype=int)
